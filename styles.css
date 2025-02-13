@@ -1,0 +1,180 @@
+:root {
+    --branco-principal: #ffffff;
+    --cinza-secundario: #c0c0c0;
+    --botao-azul: #167bf7;
+    --cor-de-fundo:#00030c;
+    --font_principal:'Inter';
+    --botao--efeito--hover: #EC2F46;
+}
+
+body {
+    background-color: var(--cor-de-fundo);
+    color: var(--branco-principal);
+    font-family: var(--font_principal);
+    font-size: 16px;
+    font-weight: 400;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* section banner príncipal */
+
+.principal {
+    background-image: url(img/Background.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    align-items: center; /*alinha de acordo com o diplay do elemento pai */
+    text-align: center; /*além do texto, também alinha a imagem ao centro do grid columns */
+}
+
+.container {
+    height: 100vh;
+    display: grid; /*propriedade que ira definir o comportamento da divisão do layout em grid */
+    grid-template-columns: 50% 50%; /*propriedade que definiu a grid em duas colunas iguais, se fosse 33% 33% 33%  seriam três colunas iguais*/
+}
+
+.container__botao {
+    background-color: var(--botao-azul);
+    border-radius: 5px;
+    padding: 1em;
+    color: var(--branco-principal);
+    display: block;
+    text-decoration: none;
+    margin-bottom: 1em; /*espaçamento externo*/
+}
+
+.container__botao:hover {
+    background-color: var(--botao--efeito--hover);
+}
+
+.botao_secundario {
+    background-color: transparent;
+    border: 2px solid var(--branco-principal);
+}
+
+.container__aviso {
+    font-size: 12px;
+    color: var(--cinza-secundario);
+}
+
+.container__aviso:hover {
+    color: var(--botao--efeito--hover);
+}
+
+.container__titulo {
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.container__imagem {
+    margin: 1em 0 2em 0; /* margin que define o espaçãmento entre a imagem e o texto: 1em acima, 0 dir, 2em baixo, 0 esq*/
+}
+
+.container__caixa {
+    margin: 0 6em; /* margin que define os valores em conjunto: 0 cime e baixo, 6em esq e dir*/
+}
+
+/* section 2 */
+
+.secundario {
+    align-items: center;
+    margin: 0 10em;
+}
+
+.secundario__imagem {
+    width: 80%;
+}
+
+.descricao__titulo{
+    font-weight: 700;
+    font-size: 48px;
+    color: var(--branco-principal);
+    margin-bottom: 0.1em;
+}
+
+.descricao__texto {
+    color: var(--cinza-secundario);
+}
+
+/* section 3 */
+
+.secundario__botao {
+    display: inline-block; /*inline-block automaticamente define o tamanho do botao de acordo com o texto, criando o espaçamento exato */
+    margin-top: 1em;
+}
+
+.secundario__botao:hover {
+    background-color: var(--botao--efeito--hover); 
+}
+
+.container__descricao {
+    padding: 2em; 
+}
+
+/*section 4 aproveita as propriedades da section 2*/
+
+/* section dispositivos */
+
+.dispositivos__lista {
+    display: flex; /*Por padrão o display flex já é configurado em rows (linha) neste caso deixam os ícones lado a lado*/
+    justify-content: center; /*centraliza os ícones ao centro da página, de acordo com o display flex*/
+    list-style-type: none; /*retira o ponto que vem automaticamente na lista*/
+    margin: 5em 0;
+}
+
+.dispositivos {
+    text-align: center; /*centraliza todos os textos em relação aos ícones*/
+}
+
+.dispositivos__titulo {
+    font-size: 48px;
+    color: var(--branco-principal);
+}
+
+.lista__item {
+    font-size: 32px;
+    color: var(--branco-principal);
+}
+
+/*footer*/
+
+.rodape {
+    text-align: center;
+    margin: 5em 3em;
+ }
+
+ .rodape__logo{
+    margin-bottom: 2em;
+ }
+
+.rodape__lista {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    margin-top: 1em;
+}
+
+.lista__link a {
+    text-decoration: none;
+    font-size: 16px;
+    margin-left: 1em;
+    color: var(--branco-principal);
+}
+
+.lista__link a:hover {
+    color: var(--botao-azul);
+}
+
+
+.rodape__texto {
+    margin: 1em 0;
+    font-size: 14px;
+    margin: 1em 0;
+    color: var(--branco-principal);
+}
+
+
+ 
